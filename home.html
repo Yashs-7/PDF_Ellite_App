@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- <link rel="stylesheet" href="css/contact.css">
+     -->
+    <style>
+        * {
+            box-sizing: border-box;
+            font-size: 22px;
+            margin: 0;
+            /* font-family:'Times New Roman', Times, serif; */
+        }
+
+
+        .help {
+            margin-top: 1em;
+            text-align: center;
+            text-shadow: 0.05em 0.05em 0.2em blue;
+        }
+
+        .need {
+            font-size: 2em;
+
+        }
+
+
+        .us {
+            font-size: 1em;
+            color: red;
+            text-shadow: 0.05em 0.05em 0.02em yellow;
+
+        }
+
+        .ls {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .our {
+            display: flex;
+            margin: 2em;
+        }
+
+        .ls {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            flex-direction: row;
+        }
+
+        .hrs {
+            font-size: 1em;
+        }
+
+        .cont {
+            background-color: rgb(126, 156, 155, 0.4);
+            /* padding-top: 1em;
+  padding-right: 2em;
+  padding-left:1em ; */
+            width: 35vw;
+            margin-right: 2.5em;
+            margin-bottom: 3em;
+            padding-top: 1em;
+            padding-left: 1em;
+            padding-bottom: 1.5em;
+            color: rgb(53, 57, 59);
+        }
+
+        .cont:hover {
+            box-shadow: 0.05em 0.05em 0.3em rgb(10, 4, 4, 0.6);
+        }
+
+        .info {
+            color: black;
+            padding-left: 2em;
+            font-size: 0.9em;
+        }
+
+        .provide {
+            text-align: center;
+            font-weight: 400;
+            font-size: 1.5em;
+            color: rgb(2, 2, 2);
+            text-shadow: 0.05em 0.05em 0.02em yellow;
+        }
+
+        .detail {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+        }
+
+        .det input {
+            color: rgb(2, 2, 2, 0.6);
+            height: 7vh;
+            width: 35vw;
+        }
+
+        .forms {
+            padding-top: 1em;
+            padding-bottom: 1em;
+            margin-top: 2em;
+
+        }
+
+        .det {
+            margin-left: 1em;
+            margin-right: 1em;
+            color: rgb(2, 2, 2, 0.5);
+        }
+
+        .sugg textarea {
+            margin-top: 1em;
+            width: 80vw;
+        }
+
+        .sub {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .sub button {
+            width: 15vw;
+            height: 6vh;
+            margin-top: 1em;
+            background-color: red;
+            border: 0.1em solid black;
+            border-radius: 0.9em;
+        }
+
+        .forr {
+            background-color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="help"><Strong class="need">Need Help? </Strong><span class="us">Contact Us</span></div>
+    <div class="our">
+        <ul class="ls">
+            <li class="cont"><strong><strong>&#8962;</strong> Our Address: </strong><br><span class="info">Lorem ipsum
+                    dolor sit amet.</span>
+            </li>
+            <li class="cont"><strong>&#128231;Email:</strong> <br><span class="info">Lorem ipsum dolor sit.</span></li>
+            <li class="cont"> <strong>&#128222; Contact Number:</strong> <br><span class="info">+91 4635735623</span>
+            </li>
+            <li class="cont"><strong>&#128337;Opening Hours: </strong><br><span class="info"><strong
+                        class="hrs">Mon-Fri:
+                    </strong>8AM-12PM ,<strong class="hrs">Sat-Sun: </strong>Open 24 Hours</span></li>
+        </ul>
+    </div>
+    <div class="provide">Your Details</div>
+    <form action="/signup" method="post">
+        signup
+        <input type="text" placeholder="Name" name="name" id="name">
+        <br>
+        <input type="text" name="email" id="email" placeholder="Email">
+        <br>
+        <input type="text" name="password" id="password" placeholder="password">
+        <input type="checkbox" name="check" id="check">
+        <label for="check">You agree to our terms and conditions</label>
+
+        <input type="submit" value="Submit">
+    </form>
+    <br><br><br><br><br>
+    <form action="/login" method="post">
+        login
+        <input type="text" placeholder="Name" name="name" id="name">
+        <br>
+        <input type="text" name="email" id="email" placeholder="Email">
+        <br>
+        <input type="text" name="password" id="password" placeholder="password">
+        <input type="submit" value="Submit">
+        <input type="checkbox" name="check" id="check">
+        <label for="check">You agree to our terms and conditions</label>
+    </form>
+    <br><br><br><br><br>
+
+    <form action="/delete" method="post">
+        delete
+        <br>
+        <input type="text" placeholder="Name" name="name" id="name">
+        <br>
+        <input type="text" name="email" id="email" placeholder="Email">
+        <br>
+        <input type="text" name="password" id="password" placeholder="password">
+        <input type="checkbox" name="check" id="check"> <label for="check">You agree to delete acccount</label>
+        <br>
+        <input type="submit" value="Delete">
+    </form>
+
+    <form action="/add-note" method="post">
+        add-note <br>
+        <input type="email" name="email" value='hello' id="email">
+        <input type="text" name="title" id="title" placeholder="title">
+        <br>
+
+        <textarea name="content" id="content" cols="30" placeholder='Enter note' rows="10"></textarea>
+        <input type="submit" value="Add Note">
+    </form>
+
+
+</body>
+
+</html>
