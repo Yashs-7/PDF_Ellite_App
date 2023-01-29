@@ -1,17 +1,17 @@
-import  { useState } from "react";
+import react, { useState,useEffect } from "react";
 
 function Time() {
-  var time = new Date().toLocaleTimeString();
-  const [count, setTime] = useState(time);
+  const [time, setTime] = useState(Date.now());
 
-  function getTime() {
-    var newtime = new Date().toLocaleTimeString();
-    setTime(newtime);
-  }
-  setInterval(getTime, 1);
+  useEffect(() => {
+    const interval = setInterval(() => setTime(Date.now()), 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
   return (
     <>
-      <h1>{count}</h1>
+      <li>{time}</li>
     </>
   );
 }

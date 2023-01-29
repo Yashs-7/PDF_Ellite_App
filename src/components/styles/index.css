@@ -153,13 +153,6 @@ background-color: #1b1c2250;
 }
 
 
-.Landing-page {
-    background-image: url('./background.jpeg');
-    background-position: fixed;
-    background-attachment: fixed;
-    /* background-repeat: no-repeat; */
-}
-
 .bgbed {
     background-image: url('./background.jpeg');
     background-position: fixed;
@@ -184,3 +177,18 @@ background-color: #1b1c2250;
 
     padding: 1%;
 }
+
+.login:hover{
+    box-shadow: 0 0 5px rgb(31, 30, 30),
+        0 0 25px rgb(92, 75, 75),
+        0 0 50px rgb(194, 180, 180),
+        0 0 100px rgb(238, 236, 236);
+
+}
+
+
+.Landing-page{
+    background-image: url('./background.jpeg');
+    background-attachment: fixed;
+    background-position: fixed;
+  }

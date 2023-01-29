@@ -15,6 +15,7 @@ import About from './components/About';
 import Lower from './components/Lower';
 import './components/styles/framework.css'
 import SignUpPage from './components/SignUpPage';
+// import Dashboard from './components/Dashboard/pages';
 function App() {
   const homeRef = useRef(null); //represents main section
   const aboutRef = useRef(null); //represents about section
@@ -35,15 +36,16 @@ function App() {
           />
           <Route key="signup" exact path='/signup' element={
             <SignUpPage />
-          } />
+           } />
           <Route key="login" exact path='/login' element={
-            <section className='Landing-page'>
+            <section className='Landing-page-get-start'>
 
               <GetStart />
             </section>
           } />
         </Routes>
-      </BrowserRouter>
+       </BrowserRouter>
+{/* <Dashboard/> */}
     </>
   );
 }

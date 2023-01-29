@@ -29,7 +29,7 @@ const Home = ({homeRef,aboutRef,contactRef}) => {
           {
             property.properties.map((ele)=>{
               return(
-                <CardHome heading={ele.F1} description={ele.P1} imgUrl={ele.img} />
+                <CardHome key={ele.img} heading={ele.F1} description={ele.P1} imgUrl={ele.img} />
               )
             })
           }
